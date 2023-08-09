@@ -1,0 +1,26 @@
+const obj1={
+    name:'Sujitha',
+    age:21,
+    dept:'cse'
+}
+const obj2={
+    name:'Sujitha',
+    age:21,
+    dept:'cse'
+}
+function compare(obj1, obj2) {
+  const a = Object.keys(obj1);
+  const b = Object.keys(obj2);
+  if (a.length !== b.length) {
+    return false;
+  }
+  else{
+      for (let i of a) {
+    if (obj1[i] !== obj2[i]) {
+      return false;
+    }
+  }
+  }
+  return true;
+}
+console.log(compare(obj1,obj2))
